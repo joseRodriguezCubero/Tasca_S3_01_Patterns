@@ -1,5 +1,7 @@
 package n1exercici1;
 
+import java.util.NoSuchElementException;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -12,8 +14,13 @@ public class Main {
                 String message2 = Entrada.leerString("type a command to save");
                 Undo.commandAdd(message2);
             } else if (message.equals("remove")) {
-                String message2 = Entrada.leerString("type a command to remove");
-                Undo.commandDel(message);
+                try {
+                    Undo.commandDel();
+                    System.out.println("Last command removed");
+                }catch (NoSuchElementException e){
+                    System.out.println("The command List is empty");
+                }
+
             } else if (message.equals("print")) {
                 Undo.commandPrint();
             } else if (message.equals("help")) {
