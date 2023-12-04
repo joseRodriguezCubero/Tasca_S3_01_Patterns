@@ -17,7 +17,7 @@ public class Main {
                 try {
                     Undo.commandDel();
                     System.out.println("Last command removed");
-                }catch (NoSuchElementException e){
+                } catch (NoSuchElementException e) {
                     System.out.println("The command List is empty");
                 }
 
