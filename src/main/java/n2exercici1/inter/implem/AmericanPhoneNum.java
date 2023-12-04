@@ -11,11 +11,10 @@ public class AmericanPhoneNum implements IPhoneNum {
         //TODO utilizar j-option pane para crear una ventana tipo formulario.
         String prefix = "+1";
 
-        return prefix + " " +number;
+        return prefix + " " + number;
     }
 
     //+1 (415) 555‑0132
-
 
 
 }
