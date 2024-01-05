@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
 
         Undo.getUndo();
-        System.out.println("type ''help--'' for a list of commands");
+        System.out.println("type ''help'' for a list of commands");
         String message;
         do {
             message = Entrada.leerString("type a command");
