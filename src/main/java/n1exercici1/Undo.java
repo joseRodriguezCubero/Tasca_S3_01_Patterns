@@ -1,22 +1,23 @@
 package n1exercici1;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.NoSuchElementException;
 
 public class Undo {
     private static Undo instance;
 
-    private static LinkedList<String> commandList = new LinkedList<String>();
+    private static LinkedList<String> commandList;
 
-    private Undo() {
-
+    public Undo() {
+        commandList = new LinkedList<String>();
     }
 
-    public static void getUndo() {
+    public static Undo getUndo() {
         if (instance == null) {
             instance = new Undo();
         }
-
+        return instance;
     }
 
     public static void commandAdd(String s) {
